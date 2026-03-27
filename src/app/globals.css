@@ -1,0 +1,45 @@
+:root {
+  --background: #f4f7fb;
+  --foreground: #1f2430;
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-border: rgba(126, 148, 186, 0.16);
+  --primary: #3151e5;
+  --primary-soft: rgba(49, 81, 229, 0.12);
+  --secondary-text: #667085;
+  --shadow: 0 24px 60px rgba(30, 41, 59, 0.08);
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at top left, rgba(123, 180, 255, 0.24), transparent 28%),
+    radial-gradient(circle at top right, rgba(188, 204, 255, 0.26), transparent 24%),
+    linear-gradient(180deg, #eef3fb 0%, var(--background) 100%);
+  font-family: var(--font-geist-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
