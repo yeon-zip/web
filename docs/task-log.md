@@ -34,3 +34,8 @@
 - 작업: 초기 스택에 React Query 추가
 - 결과: `@tanstack/react-query`를 설치하고 루트 레이아웃에 Query Provider를 연결함. 기술 스택 문서와 제품 문서에도 반영함
 - 다음 할 일: 초기 셋업 브랜치를 만들고 첫 커밋 후 원격 저장소로 푸시
+
+### 2026-03-27 20:20
+- 작업: Git 초기화 및 원격 브랜치 푸시
+- 결과: `codex/init-next-foundation` 브랜치를 생성하고 `chore: initialize next foundation` 커밋을 만든 뒤 `origin`에 푸시함
+- 다음 할 일: 이후 기능은 기능 단위 브랜치에서 이어서 작업하고 PR로 병합
