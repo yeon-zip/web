@@ -42,5 +42,5 @@
 
 ### 2026-03-27 20:35
 - 작업: README 스택 보강 및 main 브랜치 준비
-- 결과: README에 React Query를 추가하고 현재 기준 커밋에서 `main` 브랜치를 생성할 준비를 완료함
-- 다음 할 일: 변경사항을 커밋하고 `codex/init-next-foundation`, `main` 브랜치를 원격에 푸시
+- 결과: README에 React Query를 추가했고 `codex/init-next-foundation` 브랜치에 반영 후 원격 푸시함. 같은 기준 커밋으로 `main` 브랜치를 생성하고 원격에도 푸시함
+- 다음 할 일: 이후 기능 작업은 기능 브랜치에서 이어가고, 병합 기준 브랜치는 `main`으로 사용
