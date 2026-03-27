@@ -39,3 +39,8 @@
 - 작업: Git 초기화 및 원격 브랜치 푸시
 - 결과: `codex/init-next-foundation` 브랜치를 생성하고 `chore: initialize next foundation` 커밋을 만든 뒤 `origin`에 푸시함
 - 다음 할 일: 이후 기능은 기능 단위 브랜치에서 이어서 작업하고 PR로 병합
+
+### 2026-03-27 20:35
+- 작업: README 스택 보강 및 main 브랜치 준비
+- 결과: README에 React Query를 추가하고 현재 기준 커밋에서 `main` 브랜치를 생성할 준비를 완료함
+- 다음 할 일: 변경사항을 커밋하고 `codex/init-next-foundation`, `main` 브랜치를 원격에 푸시

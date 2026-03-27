@@ -6,6 +6,7 @@
 
 - Next.js App Router
 - React
+- React Query
 - TypeScript
 - CSS Modules
 - Feature-Sliced Design
