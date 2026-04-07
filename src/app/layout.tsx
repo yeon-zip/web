@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { AppHeader } from "@/widgets/app-header/ui/appHeader";
 import { QueryProvider } from "@/shared/providers/query-provider";
+import styles from "./layout.module.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,7 +17,14 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <div className={styles.app}>
+            <div className={styles.shell}>
+              <AppHeader />
+              <main className={styles.content}>{children}</main>
+            </div>
+          </div>
+        </QueryProvider>
       </body>
     </html>
   );

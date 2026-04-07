@@ -1,6 +1,16 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
 import styles from "./searchForm.module.css";
 
 export function SearchForm() {
+  const [query, setQuery] = useState("");
+  const trimmedQuery = query.trim();
+  const searchHref = trimmedQuery
+    ? `/search-list?query=${encodeURIComponent(trimmedQuery)}`
+    : "/search-list";
+
   return (
     <div className={styles.form} role="search" aria-label="도서 검색">
       <div className={styles.inputShell}>
@@ -18,11 +28,15 @@ export function SearchForm() {
         <input
           type="text"
           className={styles.input}
+          value={query}
           placeholder="예: 미움받을 용기, 이호철, 97889972752870"
           aria-label="검색어 입력"
+          onChange={(event) => setQuery(event.target.value)}
         />
       </div>
-      <button type="button" className={styles.button}>검색하기</button>
+      <Link className={styles.button} href={searchHref}>
+        검색하기
+      </Link>
     </div>
   );
 }
