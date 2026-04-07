@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  min-height: 132px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid rgba(126, 148, 186, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 32px rgba(30, 41, 59, 0.06);
+}
+
+.label {
+  color: #8a94a6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.value {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.description {
+  color: var(--secondary-text);
+  font-size: 14px;
+  line-height: 1.6;
+}

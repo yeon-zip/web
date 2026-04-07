@@ -1,0 +1,98 @@
+.page {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 36px;
+  border: 1px solid rgba(126, 148, 186, 0.16);
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 32px 68px rgba(30, 41, 59, 0.12);
+  backdrop-filter: blur(22px);
+}
+
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(49, 81, 229, 0.08);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -0.06em;
+}
+
+.description {
+  max-width: 720px;
+  color: var(--secondary-text);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 14px;
+  border: 1px solid rgba(126, 148, 186, 0.16);
+  border-radius: 28px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(248, 250, 255, 0.8)
+  );
+}
+
+@media (max-width: 900px) {
+  .panel {
+    padding: 28px;
+    border-radius: 30px;
+  }
+
+  .title {
+    font-size: clamp(34px, 8vw, 48px);
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel {
+    gap: 24px;
+    padding: 22px 18px;
+    border-radius: 26px;
+  }
+
+  .contentBlock {
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  .description {
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.loading {
+  display: flex;
+  min-height: 132px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(126, 148, 186, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 32px rgba(30, 41, 59, 0.06);
+}
+
+.error {
+  color: #a63232;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

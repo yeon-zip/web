@@ -1,76 +1,39 @@
-import { LocationSelector } from "@/features/home/location-selector/ui/locationSelector";
+"use client";
+
+import { useState } from "react";
+import {
+  LocationSelector,
+  type LocationSelectorValue,
+} from "@/features/home/location-selector/ui/locationSelector";
 import { SearchForm } from "@/features/home/search-form/ui/searchForm";
 import { SummaryCards } from "@/features/home/summary-cards/ui/summaryCards";
-import { HOME_SEARCH_HERO_COPY } from "../model/homeSearchHeroCopy";
 import styles from "./homeSearchHero.module.css";
 
-type HomeSearchHeroProps = {
-  isError: boolean;
-  isLoading: boolean;
-};
+export function HomeSearchHero() {
+  const [selectedLocation, setSelectedLocation] =
+    useState<LocationSelectorValue>("seongsu");
 
-function HeroSkeleton() {
-  return (
-    <div className={styles.panel} aria-busy="true">
-      <div className={styles.skeletonBadge} />
-      <div className={styles.skeletonTitle} />
-      <div className={styles.skeletonDescription} />
-      <div className={styles.skeletonBlock}>
-        <div className={styles.skeletonChipRow}>
-          <span className={styles.skeletonChip} />
-          <span className={styles.skeletonChip} />
-          <span className={styles.skeletonChip} />
-        </div>
-        <div className={styles.skeletonGrid}>
-          <span className={styles.skeletonCard} />
-          <span className={styles.skeletonCard} />
-          <span className={styles.skeletonCard} />
-        </div>
-        <div className={styles.skeletonSearch} />
-      </div>
-    </div>
-  );
-}
-
-function ErrorState() {
-  return (
-    <div className={styles.panel}>
-      <div className={styles.errorCard}>
-        홈 화면 데이터를 불러오지 못했습니다. 잠시 후 다시 확인해주세요.
-      </div>
-    </div>
-  );
-}
-
-export function HomeSearchHero({ isError, isLoading }: HomeSearchHeroProps) {
   return (
     <section className={styles.page}>
       <div className={styles.container}>
-        {isLoading ? (
-          <HeroSkeleton />
-        ) : isError ? (
-          <ErrorState />
-        ) : (
-          <div className={styles.panel}>
-            <span className={styles.badge}>
-              {HOME_SEARCH_HERO_COPY.badgeLabel}
-            </span>
-            <div className={styles.heading}>
-              <h1 className={styles.title}>{HOME_SEARCH_HERO_COPY.title}</h1>
-              <p className={styles.description}>
-                {HOME_SEARCH_HERO_COPY.description}
-              </p>
-            </div>
-            <div className={styles.contentBlock}>
-              <LocationSelector items={HOME_SEARCH_HERO_COPY.locationChips} />
-              <SummaryCards items={HOME_SEARCH_HERO_COPY.summaryCards} />
-            </div>
-            <SearchForm
-              buttonLabel={HOME_SEARCH_HERO_COPY.searchButtonLabel}
-              placeholder={HOME_SEARCH_HERO_COPY.searchPlaceholder}
-            />
+        <div className={styles.panel}>
+          <span className={styles.badge}>도서 검색</span>
+          <div className={styles.heading}>
+            <h1 className={styles.title}>가까운 도서관에서 책 찾기</h1>
+            <p className={styles.description}>
+              검색하고 싶은 도서를 검색하세요. 해당 도서를 소유중인 도서관들을
+              거리순으로 보여줄게요.
+            </p>
           </div>
-        )}
+          <div className={styles.contentBlock}>
+            <LocationSelector
+              selectedLocation={selectedLocation}
+              onSelect={setSelectedLocation}
+            />
+            <SummaryCards />
+          </div>
+          <SearchForm />
+        </div>
       </div>
     </section>
   );
