@@ -2,8 +2,8 @@
 
 import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useSearchResultBooks } from "@/widgets/search/search-result-book-list/model/useSearchResultBooks";
 import { SearchResultBookList } from "@/widgets/search/search-result-book-list/ui/searchResultBookList";
+import { SearchResultLibraryList } from "@/widgets/search/search-result-library-list/ui/searchResultLibraryList";
 import {
   SearchResultTopBox,
   type SearchRadiusKm,
@@ -18,26 +18,10 @@ function SearchListPageContent() {
   const [selectedRadiusKm, setSelectedRadiusKm] = useState<SearchRadiusKm>(30);
   const [availabilityOnly, setAvailabilityOnly] = useState(false);
   const [selectedBookId, setSelectedBookId] = useState("");
-  const { books, isError, isLoading } = useSearchResultBooks();
 
   useEffect(() => {
     setQuery(queryParam);
   }, [queryParam]);
-
-  useEffect(() => {
-    if (books.length === 0) {
-      setSelectedBookId("");
-      return;
-    }
-
-    setSelectedBookId((currentSelectedBookId) => {
-      const hasSelectedBook = books.some(
-        (book) => book.bookId === currentSelectedBookId,
-      );
-
-      return hasSelectedBook ? currentSelectedBookId : books[0].bookId;
-    });
-  }, [books]);
 
   const handleSearch = () => {
     const trimmedQuery = query.trim();
@@ -70,12 +54,10 @@ function SearchListPageContent() {
           onAvailabilityChange={setAvailabilityOnly}
         />
         <SearchResultBookList
-          books={books}
-          isLoading={isLoading}
-          isError={isError}
           selectedBookId={selectedBookId}
           onSelectBook={setSelectedBookId}
         />
+        <SearchResultLibraryList />
       </div>
     </section>
   );

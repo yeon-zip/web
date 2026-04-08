@@ -1,6 +1,14 @@
 import type { KeyboardEvent } from "react";
-import type { SearchResultBook } from "../api/searchResultBooksApi";
 import styles from "./searchResultBookCard.module.css";
+
+export type SearchResultBook = {
+  author: string;
+  bookId: string;
+  coverColorFrom: string;
+  coverColorTo: string;
+  genre: string;
+  title: string;
+};
 
 type SearchResultBookCardProps = {
   book: SearchResultBook;
