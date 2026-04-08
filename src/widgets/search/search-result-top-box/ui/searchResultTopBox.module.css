@@ -1,0 +1,354 @@
+.panel {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 28px;
+  padding: 34px 36px;
+  border: 1px solid rgba(126, 148, 186, 0.16);
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 32px 68px rgba(30, 41, 59, 0.12);
+  backdrop-filter: blur(22px);
+}
+
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(49, 81, 229, 0.08);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.title {
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -0.06em;
+}
+
+.metaRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.description {
+  max-width: 760px;
+  color: var(--secondary-text);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.metaInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.locationChip {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: rgba(49, 81, 229, 0.08);
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.sortLabel {
+  color: #4a5568;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.searchRow {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.inputShell {
+  display: flex;
+  flex: 1;
+  min-height: 78px;
+  align-items: center;
+  gap: 14px;
+  padding: 0 20px;
+  border: 1px solid rgba(126, 148, 186, 0.18);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.input::placeholder {
+  color: #98a2b3;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.searchButton {
+  display: inline-flex;
+  min-width: 124px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #3351f1 0%, #4f5fff 100%);
+  box-shadow: 0 18px 36px rgba(49, 81, 229, 0.22);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    filter 160ms ease;
+}
+
+.searchButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 40px rgba(49, 81, 229, 0.26);
+  filter: saturate(1.05);
+}
+
+.searchButton:focus-visible {
+  outline: 2px solid rgba(49, 81, 229, 0.28);
+  outline-offset: 3px;
+}
+
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 16px;
+  border: 1px solid rgba(126, 148, 186, 0.16);
+  border-radius: 28px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(248, 250, 255, 0.82)
+  );
+}
+
+.radiusGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.radiusButton {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid rgba(126, 148, 186, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #4a5568;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.radiusButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(49, 81, 229, 0.2);
+  box-shadow: 0 10px 22px rgba(30, 41, 59, 0.08);
+}
+
+.radiusButton:focus-visible {
+  outline: 2px solid rgba(49, 81, 229, 0.26);
+  outline-offset: 3px;
+}
+
+.radiusButtonSelected {
+  border-color: rgba(49, 81, 229, 0.2);
+  background: linear-gradient(135deg, #3351f1 0%, #4f5fff 100%);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(49, 81, 229, 0.2);
+}
+
+.checkboxLabel {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px;
+  border: 1px solid rgba(126, 148, 186, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+}
+
+.checkboxInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.checkboxBox {
+  position: relative;
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid rgba(126, 148, 186, 0.42);
+  border-radius: 6px;
+  background: #fff;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.checkboxInput:checked + .checkboxBox {
+  border-color: transparent;
+  background: linear-gradient(135deg, #3351f1 0%, #4f5fff 100%);
+  box-shadow: 0 10px 20px rgba(49, 81, 229, 0.18);
+}
+
+.checkboxInput:checked + .checkboxBox::after {
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  width: 5px;
+  height: 10px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  content: "";
+}
+
+.checkboxInput:focus-visible + .checkboxBox {
+  outline: 2px solid rgba(49, 81, 229, 0.26);
+  outline-offset: 3px;
+}
+
+.checkboxText {
+  color: #20263a;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    padding: 28px;
+    border-radius: 30px;
+  }
+
+  .title {
+    font-size: clamp(34px, 8vw, 48px);
+  }
+
+  .metaRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .metaInfo {
+    justify-content: flex-start;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .checkboxLabel {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .panel {
+    gap: 24px;
+    padding: 22px 18px;
+    border-radius: 26px;
+  }
+
+  .searchRow {
+    flex-direction: column;
+  }
+
+  .inputShell {
+    min-height: 68px;
+  }
+
+  .searchButton {
+    min-height: 62px;
+  }
+
+  .filterBar {
+    padding: 14px 12px;
+    border-radius: 22px;
+  }
+
+  .checkboxLabel {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

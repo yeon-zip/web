@@ -12,7 +12,7 @@
   width: 100%;
   max-width: 1140px;
   flex-direction: column;
-  gap: 28px;
+  gap: 16px;
 }
 
 .content {
@@ -28,6 +28,6 @@
   }
 
   .shell {
-    gap: 20px;
+    gap: 12px;
   }
 }

@@ -1,0 +1,50 @@
+[
+  {
+    "bookId": "book-001",
+    "title": "미움받을 용기",
+    "author": "기시미 이치로, 고가 후미타케",
+    "genre": "자기계발",
+    "coverColorFrom": "#2f6dff",
+    "coverColorTo": "#8fb5ff"
+  },
+  {
+    "bookId": "book-002",
+    "title": "아주 작은 습관의 힘",
+    "author": "제임스 클리어",
+    "genre": "자기계발",
+    "coverColorFrom": "#0f8d77",
+    "coverColorTo": "#8ce6d4"
+  },
+  {
+    "bookId": "book-003",
+    "title": "세이노의 가르침",
+    "author": "세이노",
+    "genre": "에세이",
+    "coverColorFrom": "#444ce7",
+    "coverColorTo": "#a2b2ff"
+  },
+  {
+    "bookId": "book-004",
+    "title": "불편한 편의점",
+    "author": "김호연",
+    "genre": "소설",
+    "coverColorFrom": "#f97316",
+    "coverColorTo": "#fdba74"
+  },
+  {
+    "bookId": "book-005",
+    "title": "역행자",
+    "author": "자청",
+    "genre": "자기계발",
+    "coverColorFrom": "#7c3aed",
+    "coverColorTo": "#c4b5fd"
+  },
+  {
+    "bookId": "book-006",
+    "title": "트렌드 코리아 2026",
+    "author": "김난도 외",
+    "genre": "경제경영",
+    "coverColorFrom": "#0f172a",
+    "coverColorTo": "#64748b"
+  }
+]
