@@ -7,28 +7,46 @@
   --primary-soft: rgba(49, 81, 229, 0.12);
   --secondary-text: #667085;
   --shadow: 0 24px 60px rgba(30, 41, 59, 0.08);
+  --font-sans:
+    "Pretendard Variable",
+    "Pretendard",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  --font-mono:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace;
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(123, 180, 255, 0.24), transparent 28%),
+    radial-gradient(circle at top right, rgba(188, 204, 255, 0.26), transparent 24%),
+    linear-gradient(180deg, #eef3fb 0%, var(--background) 100%);
 }
 
 html,
 body {
+  min-height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 body {
-  min-height: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   color: var(--foreground);
-  background:
-    radial-gradient(circle at top left, rgba(123, 180, 255, 0.24), transparent 28%),
-    radial-gradient(circle at top right, rgba(188, 204, 255, 0.26), transparent 24%),
-    linear-gradient(180deg, #eef3fb 0%, var(--background) 100%);
-  font-family: var(--font-geist-sans), sans-serif;
+  background: transparent;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

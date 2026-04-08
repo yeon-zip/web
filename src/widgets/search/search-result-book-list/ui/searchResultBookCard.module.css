@@ -1,0 +1,158 @@
+.card {
+  display: flex;
+  width: 280px;
+  min-width: 280px;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid rgba(126, 148, 186, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 36px rgba(30, 41, 59, 0.08);
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 46px rgba(30, 41, 59, 0.1);
+}
+
+.card:focus-visible {
+  outline: 2px solid rgba(49, 81, 229, 0.26);
+  outline-offset: 4px;
+}
+
+.selected {
+  border-color: rgba(49, 81, 229, 0.24);
+  box-shadow: 0 26px 50px rgba(49, 81, 229, 0.14);
+}
+
+.cover {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 18px;
+  padding: 22px;
+  border-radius: 24px;
+  color: #fff;
+}
+
+.coverMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.genre {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.92;
+}
+
+.coverTitle {
+  font-size: 40px;
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+.coverAuthor {
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0.92;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.author {
+  color: var(--secondary-text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.selectedLabel {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.detailButton {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid rgba(126, 148, 186, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--foreground);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.detailButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(49, 81, 229, 0.24);
+  box-shadow: 0 10px 22px rgba(30, 41, 59, 0.08);
+}
+
+.detailButton:focus-visible {
+  outline: 2px solid rgba(49, 81, 229, 0.26);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .card {
+    width: 82vw;
+    min-width: 82vw;
+    padding: 16px;
+  }
+
+  .cover {
+    min-height: 280px;
+    padding: 18px;
+  }
+
+  .coverTitle {
+    font-size: 34px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

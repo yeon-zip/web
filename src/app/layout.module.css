@@ -1,0 +1,72 @@
+.app {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100dvh;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 24px 24px;
+}
+
+.app::before,
+.app::after {
+  position: absolute;
+  z-index: 0;
+  width: 360px;
+  height: 360px;
+  border-radius: 999px;
+  content: "";
+  filter: blur(18px);
+}
+
+.app::before {
+  top: 220px;
+  left: -160px;
+  background: radial-gradient(
+    circle,
+    rgba(97, 178, 255, 0.24),
+    transparent 68%
+  );
+}
+
+.app::after {
+  right: -140px;
+  bottom: 140px;
+  background: radial-gradient(
+    circle,
+    rgba(168, 146, 255, 0.16),
+    transparent 68%
+  );
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1140px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 12px 16px 24px;
+  }
+
+  .app::before {
+    left: -220px;
+  }
+
+  .shell {
+    gap: 12px;
+  }
+}
