@@ -1,5 +1,8 @@
+"use client";
+
 import type { LocationSelectorValue } from "@/type/home";
 import styles from "./locationSelector.module.css";
+import { useEffect } from "react";
 
 type LocationSelectorButtonProps = {
   label: string;
@@ -33,6 +36,8 @@ export function LocationSelector({
   onSelect,
   selectedLocation,
 }: LocationSelectorProps) {
+  useEffect(() => {}, []);
+
   return (
     <div className={styles.row} aria-label="위치 설정 선택지">
       <LocationSelectorButton

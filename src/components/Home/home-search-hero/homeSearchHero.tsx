@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { LocationSelector } from "@/components/location-selector/locationSelector";
-import { SearchForm } from "@/components/search-form/searchForm";
-import { SummaryCards } from "@/components/summary-cards/summaryCards";
+import { LocationSelector } from "@/components/Home/location-selector/locationSelector";
+import { SearchForm } from "@/components/Search/search-form/searchForm";
+import { SummaryCards } from "@/components/Search/summary-cards/summaryCards";
 import type { LocationSelectorValue } from "@/type/home";
 import styles from "./homeSearchHero.module.css";
 
