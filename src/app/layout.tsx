@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { AppHeader } from "@/widgets/app-header/ui/appHeader";
-import { QueryProvider } from "@/shared/providers/query-provider";
+import { AppHeader } from "@/components/app-header/appHeader";
+import { QueryProvider } from "@/components/query-provider/queryProvider";
 import styles from "./layout.module.css";
 import "./globals.css";
 
