@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { LocationSelector } from "@/components/Home/location-selector/locationSelector";
 import { SearchForm } from "@/components/Search/search-form/searchForm";
-import { SummaryCards } from "@/components/Search/summary-cards/summaryCards";
+import { SummaryCards } from "@/components/Home/summary-cards/summaryCards";
 import type { LocationSelectorValue } from "@/type/home";
 import styles from "./homeSearchHero.module.css";
 

@@ -2,8 +2,8 @@
 
 import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { SearchResultBookList } from "@/components/Search/search-result-book-list/searchResultBookList";
-import { SearchResultLibraryList } from "@/components/Search/search-result-library-list/searchResultLibraryList";
+import { SearchResultBookList } from "@/components/Book/search-result-book-list/searchResultBookList";
+import { SearchResultLibraryList } from "@/components/Library/search-result-library-list/searchResultLibraryList";
 import { SearchResultTopBox } from "@/components/Search/search-result-top-box/searchResultTopBox";
 import type { SearchRadiusKm } from "@/type/search";
 import styles from "./searchListPage.module.css";

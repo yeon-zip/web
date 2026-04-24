@@ -1,5 +1,5 @@
-import { OpenFavoritesButton } from "@/components/open-favorites-button/openFavoritesButton";
-import { SignInButton } from "@/components/sign-in-button/signInButton";
+import { OpenFavoritesButton } from "@/components/Header/open-favorites-button/openFavoritesButton";
+import { SignInButton } from "@/components/Header/sign-in-button/signInButton";
 import styles from "./appHeader.module.css";
 
 export function AppHeader() {

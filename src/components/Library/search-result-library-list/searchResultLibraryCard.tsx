@@ -1,5 +1,5 @@
-import { LibraryDetailButton } from "@/components/library-detail-button/libraryDetailButton";
-import { LibraryFavoriteButton } from "@/components/library-favorite-button/libraryFavoriteButton";
+import { LibraryDetailButton } from "@/components/Library/Button/library-detail-button/libraryDetailButton";
+import { LibraryFavoriteButton } from "@/components/Library/Button/library-favorite-button/libraryFavoriteButton";
 import type { SearchResultLibrary } from "@/type/search";
 import styles from "./searchResultLibraryCard.module.css";
 
