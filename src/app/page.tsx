@@ -1,10 +1,3 @@
-import { HomeSearchHero } from "@/widgets/home/search-hero/ui/homeSearchHero";
-import styles from "./page.module.css";
+import { HomePage } from "@/page/home/homePage";
 
-export default function Home() {
-  return (
-    <section className={styles.page}>
-      <HomeSearchHero />
-    </section>
-  );
-}
+export default HomePage;
