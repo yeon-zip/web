@@ -1,3 +1,5 @@
-import { HomePage } from "@/page/home/homePage";
+import { redirect } from "next/navigation";
 
-export default HomePage;
+export default function Page() {
+  redirect("/login");
+}

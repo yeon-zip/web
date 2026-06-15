@@ -1,0 +1,51 @@
+.button {
+  display: inline-flex;
+  width: 100%;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 12px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 14px;
+  background: #fee500;
+  color: #191919;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 16px 30px rgba(97, 83, 0, 0.14);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    filter 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.04);
+  box-shadow: 0 20px 36px rgba(97, 83, 0, 0.18);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(49, 81, 229, 0.28);
+  outline-offset: 3px;
+}
+
+.icon {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #191919;
+  color: #fee500;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.label {
+  overflow-wrap: anywhere;
+}

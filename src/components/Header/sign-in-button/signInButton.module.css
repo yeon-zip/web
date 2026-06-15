@@ -28,3 +28,10 @@
   outline: 2px solid rgba(49, 81, 229, 0.32);
   outline-offset: 3px;
 }
+
+.button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+  box-shadow: none;
+}

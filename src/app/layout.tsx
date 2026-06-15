@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AppHeader } from "@/components/Header/app-header/appHeader";
+import { AuthAppShell } from "@/components/Auth/auth-app-shell/authAppShell";
 import { QueryProvider } from "@/components/query-provider/queryProvider";
 import styles from "./layout.module.css";
 import "./globals.css";
@@ -19,9 +19,9 @@ export default function RootLayout({
       <body>
         <QueryProvider>
           <div className={styles.app}>
+            <div id="modal-root" />
             <div className={styles.shell}>
-              <AppHeader />
-              <main className={styles.content}>{children}</main>
+              <AuthAppShell>{children}</AuthAppShell>
             </div>
           </div>
         </QueryProvider>
