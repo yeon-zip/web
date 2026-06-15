@@ -1,0 +1,139 @@
+.tabs {
+  display: inline-flex;
+  width: fit-content;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid rgba(126, 148, 186, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.tab {
+  min-height: 38px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--secondary-text);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.activeTab {
+  background: #172033;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid rgba(126, 148, 186, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.itemText {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.itemTitle {
+  color: var(--foreground);
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.itemMeta,
+.itemSubMeta,
+.feedback,
+.error {
+  color: var(--secondary-text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.itemSubMeta {
+  font-size: 13px;
+}
+
+.feedback,
+.error {
+  padding: 18px 4px;
+}
+
+.error {
+  color: #b42318;
+}
+
+.bookCover,
+.emptyCover {
+  width: 54px;
+  aspect-ratio: 3 / 4;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.bookCover {
+  background-position: center;
+  background-size: cover;
+  background-color: #e5eaf3;
+}
+
+.emptyCover {
+  background: linear-gradient(145deg, #d8e2ee 0%, #f2f5f9 100%);
+}
+
+.removeButton {
+  min-height: 38px;
+  flex-shrink: 0;
+  padding: 0 14px;
+  border: 1px solid rgba(126, 148, 186, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  border-color: rgba(180, 35, 24, 0.22);
+  color: #b42318;
+}
+
+.removeButton:disabled {
+  cursor: default;
+  opacity: 0.54;
+}
+
+@media (max-width: 560px) {
+  .tabs {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+  }
+
+  .item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .removeButton {
+    width: 100%;
+  }
+}

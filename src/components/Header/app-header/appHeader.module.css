@@ -1,4 +1,7 @@
 .header {
+  position: sticky;
+  top: 16px;
+  z-index: 20;
   display: flex;
   width: 100%;
   align-items: center;
@@ -34,6 +37,7 @@
 
 @media (max-width: 640px) {
   .header {
+    top: 12px;
     padding: 18px;
     border-radius: 24px;
     align-items: flex-start;

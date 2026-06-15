@@ -1,0 +1,196 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid rgba(126, 148, 186, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+}
+
+.linkCard {
+  padding: 18px 24px;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.iconBubble {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f2f6ff;
+  color: #3d74ff;
+}
+
+.iconBubble svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contactText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  color: #9aa3b2;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.value,
+.locationText {
+  color: #374151;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionTitle {
+  color: #1f2937;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+
+.scheduleGroups,
+.scheduleGroup,
+.scheduleList,
+.closedList {
+  display: flex;
+  flex-direction: column;
+}
+
+.scheduleGroups {
+  gap: 20px;
+}
+
+.scheduleGroup {
+  gap: 12px;
+}
+
+.scheduleGroupTitle {
+  color: #3151e5;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.scheduleList,
+.closedList {
+  gap: 12px;
+}
+
+.scheduleRow,
+.closedRow {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.scheduleRow dt,
+.closedRow dt {
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.scheduleRow dd,
+.closedRow dd {
+  color: #374151;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.closedRow dd {
+  text-align: left;
+}
+
+.link {
+  display: inline-flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(49, 81, 229, 0.08);
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.feedback,
+.error {
+  padding: 18px 20px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.feedback {
+  background: rgba(248, 250, 252, 0.88);
+  color: var(--secondary-text);
+}
+
+.error {
+  background: rgba(255, 239, 239, 0.95);
+  color: #c2410c;
+}
+
+@media (max-width: 640px) {
+  .infoCard {
+    gap: 22px;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .scheduleRow,
+  .closedRow {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .scheduleRow dt,
+  .scheduleRow dd,
+  .closedRow dt,
+  .closedRow dd {
+    font-size: 15px;
+  }
+}
