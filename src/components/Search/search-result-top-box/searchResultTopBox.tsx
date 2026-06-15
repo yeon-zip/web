@@ -1,17 +1,19 @@
-import type { SearchRadiusKm } from "@/type/search";
+"use client";
+
 import styles from "./searchResultTopBox.module.css";
+import { getRadiusValues } from "@/lib/getRadiusValues";
+import { HomeSearchRadiusKm } from "@/type/radius";
+import useStoredSelectedLocation from "@/hooks/useStoredSelectedLocation";
 
 type SearchResultTopBoxProps = {
   availabilityOnly: boolean;
   onAvailabilityChange: (value: boolean) => void;
   onQueryChange: (value: string) => void;
-  onRadiusChange: (value: SearchRadiusKm) => void;
+  onRadiusChange: (value: HomeSearchRadiusKm) => void;
   onSearch: () => void;
   query: string;
-  selectedRadiusKm: SearchRadiusKm;
+  selectedRadiusKm: HomeSearchRadiusKm;
 };
-
-const SEARCH_RADIUS_OPTIONS: SearchRadiusKm[] = [5, 15, 30];
 
 export function SearchResultTopBox({
   availabilityOnly,
@@ -22,9 +24,11 @@ export function SearchResultTopBox({
   query,
   selectedRadiusKm,
 }: SearchResultTopBoxProps) {
-  const title = query.trim()
-    ? `"${query.trim()}" 검색 결과`
-    : "도서 검색 결과";
+  const selectedLocation = useStoredSelectedLocation();
+  const radiusValues = getRadiusValues().filter(
+    (value): value is HomeSearchRadiusKm => typeof value === "number",
+  );
+  const title = query.trim() ? `"${query.trim()}" 검색 결과` : "도서 검색 결과";
 
   return (
     <section className={styles.panel}>
@@ -40,8 +44,9 @@ export function SearchResultTopBox({
           </p>
 
           <div className={styles.metaInfo}>
-            <span className={styles.locationChip}>현재 위치: 성수동 기준</span>
-            <span className={styles.sortLabel}>거리순 정렬</span>
+            <span className={styles.locationChip}>
+              선택 위치: {selectedLocation?.label ?? "위치 확인 중"}
+            </span>
           </div>
         </div>
       </div>
@@ -85,7 +90,7 @@ export function SearchResultTopBox({
 
       <div className={styles.filterBar}>
         <div className={styles.radiusGroup} aria-label="검색 반경">
-          {SEARCH_RADIUS_OPTIONS.map((radius) => (
+          {radiusValues.map((radius) => (
             <button
               key={radius}
               type="button"

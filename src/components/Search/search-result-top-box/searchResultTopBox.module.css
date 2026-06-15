@@ -37,8 +37,7 @@
 
 .metaRow {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 24px;
 }
 
@@ -51,9 +50,7 @@
 
 .metaInfo {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
   gap: 12px;
 }
 
@@ -68,14 +65,6 @@
   color: var(--primary);
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
-.sortLabel {
-  color: #4a5568;
-  font-size: 16px;
-  font-weight: 600;
   letter-spacing: -0.02em;
   white-space: nowrap;
 }

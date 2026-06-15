@@ -1,3 +1,9 @@
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .form {
   display: flex;
   align-items: stretch;
@@ -78,6 +84,14 @@
 .button:focus-visible {
   outline: 2px solid rgba(49, 81, 229, 0.28);
   outline-offset: 3px;
+}
+
+.errorMessage {
+  padding-left: 8px;
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 @media (max-width: 640px) {

@@ -6,8 +6,7 @@
 
 .header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -30,9 +29,9 @@
 }
 
 .title {
-  font-size: clamp(36px, 4.6vw, 56px);
-  line-height: 1.08;
-  letter-spacing: -0.05em;
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
 }
 
 .description {
@@ -40,7 +39,7 @@
   color: var(--secondary-text);
   font-size: 16px;
   line-height: 1.7;
-  text-align: right;
+  /* text-align: right; */
 }
 
 .list {
@@ -67,6 +66,6 @@
   }
 
   .title {
-    font-size: clamp(30px, 9vw, 40px);
+    font-size: clamp(24px, 7vw, 32px);
   }
 }
